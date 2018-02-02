@@ -1,0 +1,3 @@
+class SportsToday::Schedule
+
+end 

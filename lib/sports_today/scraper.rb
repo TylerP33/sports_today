@@ -1,0 +1,3 @@
+class SportsToday::Scraper
+
+end
