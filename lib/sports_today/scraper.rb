@@ -5,7 +5,7 @@ class SportsToday::Scraper
 	end
 
 	def scrape_schedule_info
-		self.get_page.css("ul.listings-program-list")
+		self.get_page.css("div.listings-program-content")
 	end
 
 	def make_schedule
