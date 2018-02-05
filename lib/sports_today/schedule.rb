@@ -1,22 +1,24 @@
 class SportsToday::Schedule
 
-	attr_accessor :sport, :description, :time
+	attr_accessor :sport, :matchup, :time, :description
 
 	@@all = []
 
 	def self.new_from_schedule(schedule)
 	  self.new(
-		schedule.search("h3").text, #sport
-		schedule.search("p.listings-program-description").text, #description
-		schedule.search("p.listings-program-airing-info").text #time
+		schedule.search("h3.listings-program-title").text, #sport
+		schedule.search("p.listings-program-episode-title").text, #matchup
+		schedule.search("p.listings-program-airing-info").text, #time
+		schedule.search("p.listings-program-description") #description
 		)
 	end
 
 
-	def initialize(sport=nil, description=nil, time=nil)
+	def initialize(sport=nil, matchup=nil, time=nil, description = nil)
 		@sport = sport
-		@description = description
+		@matchup = matchup
 		@time = time
+		@description = nil
 		@@all << self
 	end
 
