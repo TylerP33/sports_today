@@ -7,7 +7,7 @@ class SportsToday::Schedule
 	def self.new_from_schedule(schedule)
 	  self.new(
 		schedule.search("h3.listings-program-title").text, #sport
-		schedule.search("h4.listings-program-episode-title").text, #matchup
+		schedule.search("h4.listings-program-episode-title").text.strip, #matchup
 		schedule.search("p.listings-program-airing-info").text, #time
 		schedule.search("p.listings-program-description").text #description
 		)
