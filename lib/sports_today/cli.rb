@@ -1,37 +1,36 @@
 class SportsToday::CLI
 
 def call
+	SportsToday::Scraper.new.make_schedule   
+	puts "---------------------------------"
+	puts "Welcome to the World of Sports!"
+	puts "---------------------------------"
 	start
 end
 
 def start
-	puts "---------------------------------"
-	puts "Welcome to the World of Sports!"
-	puts "---------------------------------"
 	puts ""
-	puts "Here is a list of sports.  To see if your preferred sport is on today, type in the specific sport below:"
-	puts ""
-	list
+	puts "Please choose the time slot that you are interested in:"
 	puts ""
 	puts ""
 	puts ""
 	puts ""
-	
+	puts ""
 	input = nil
 	input = gets.strip
+	info = SportsToday::Schedule.find(input.to_i)
+	show_time(info)
+end
 
-	if input == "Basketball"
-		puts "7:30 PM"
-	end
+def show_time(info)
+	puts "\n#{info.time} \n#{info.description} \n#{info.sport}"
 end
 
 
 
 
-def list
-	SportsToday::Scraper.scrape_schedule
-end
+
 
 end
 
-#Debating on how I want "list" to look.  I can easily do the scheduled times of the day and from there, grab more info
+#Scraping has succesfully worked
