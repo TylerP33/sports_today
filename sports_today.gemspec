@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["TylerP33"]
   spec.email         = ["tyler3321@gmail.com"]
 
-  spec.summary       = "Fill in"
-  spec.description   = "Fill in"
+  spec.summary       = "Find out if your favorite sport is airing on TV today"
+  spec.description   = "Allows the user to pick a sport through a menu and returns airing information about selected sport"
   spec.homepage      = "https://github.com/TylerP33/sports_today"
   spec.license       = 
 
