@@ -27,23 +27,59 @@ class SportsToday::Schedule
 	end
 
 	def self.select_by(sport)
-		all.detect { |object| object.sport.include?(sport)}
+		all.detect { |object| object.sport.include?(sport) || object.description.include?(sport)}
 	end
+
+
+	def self.football
+		select_by("Football")
+	end
+
+
+	def self.baseball 
+		select_by("Baseball")
+	end
+
+
 
 	def self.basketball
 		select_by("Basketball")
 	end
 
-	def self.wrestling
-		select_by("WWE")
-	end
 
 	def self.hockey
 		select_by("Hockey")
 	end
 
+
 	def self.soccer
 		select_by("Soccer")
 	end
-end 
+
+
+	def self.tennis
+		select_by("Tennis")
+	end
+
+
+	def self.golf
+		select_by("Golf")
+	end
+
+
+	def self.wrestling
+		select_by("WWE")
+	end
+
+
+	def self.motor_sports
+		select_by("Race")
+	end
+
+
+	def self.other
+		select_by("")
+	end
+
+end
 
