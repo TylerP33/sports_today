@@ -27,7 +27,7 @@ class SportsToday::Schedule
 	end
 
 	def self.select_by(sport)
-		all.detect { |object| object.sport.include?(sport) || object.description.include?(sport)}
+		all.select { |object| object.sport.include?(sport) || object.description.include?(sport)}
 	end
 
 
