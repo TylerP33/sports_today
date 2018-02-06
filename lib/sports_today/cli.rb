@@ -10,15 +10,21 @@ end
 
 def start
 	puts ""
+	puts ""
 	puts "Please choose a sport to see if it is on today:"
 	puts ""
+	puts ""
 	menu
+	puts ""
+	puts ""
+	puts "To leave the program, just type exit and we'll get you out of here!"
+	puts ""
 	puts ""
 
 	input = nil
 	input = gets.strip
-	
 
+	
 	case input
 
 	when "Football"
@@ -60,6 +66,11 @@ def start
 	when "Other"
 		info = SportsToday::Schedule.other
 		show_info(info)
+
+	when "Exit", "exit"
+		quit
+
+
 	end
 
 end
@@ -86,10 +97,20 @@ def menu
 	puts "10. Other"
 end
 
+def quit
+	puts "\n-------------------------------------"
+	puts "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	puts "\nThanks for checking out Sports Today!"
+	puts "\n-------------------------------------"
+	puts "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	exit
+end
+
+
+
 
 
 
 
 end
-
 #Scraping has succesfully worked
