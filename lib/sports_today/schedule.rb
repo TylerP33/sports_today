@@ -26,8 +26,24 @@ class SportsToday::Schedule
 		@@all
 	end
 
-	def self.find(id)
-		self.all[id-1]
+	def self.select_by(sport)
+		all.detect { |object| object.sport.include?(sport)}
+	end
+
+	def self.basketball
+		select_by("Basketball")
+	end
+
+	def self.wrestling
+		select_by("WWE")
+	end
+
+	def self.hockey
+		select_by("Hockey")
+	end
+
+	def self.soccer
+		select_by("Soccer")
 	end
 end 
 
