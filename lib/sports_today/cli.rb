@@ -11,7 +11,7 @@ end
 def start
 	puts ""
 	puts ""
-	puts "Please choose a sport to see if it is on today:"
+	puts "Please choose a sport to see it's airing info.  Remember, all times are in Eastern Standard time."
 	puts ""
 	puts ""
 	menu
@@ -22,52 +22,56 @@ def start
 	puts ""
 
 	input = nil
-	input = gets.strip
+	input = gets.downcase.strip
 
 	
 	case input
 
-	when "Football"
+	when "football"
 		info = SportsToday::Schedule.football
 		show_info(info)
 
-	when "Baseball"
+	when "baseball"
 		info = SportsToday::Schedule.baseball
 		show_info(info)
 
-	when "Basketball"
-		info = SportsToday::Schedule.basketball
+	when "college basketball"
+		info = SportsToday::Schedule.college_basketball
 		show_info(info)
 
-	when "Hockey"
+	when "nba basketball"
+		info = SportsToday::Schedule.nba_basketball
+		show_info(info)
+
+	when "hockey"
 		info = SportsToday::Schedule.hockey
 		show_info(info)
 
-	when "Soccer"
+	when "soccer"
 		info = SportsToday::Schedule.soccer
 		show_info(info)
 
-	when "Tennis"
+	when "tennis"
 		info = SportsToday::Schedule.tennis
 		show_info(info)
 
-	when "Golf"
+	when "golf"
 		info = SportsToday::Schedule.golf
 		show_info(info)
 
-	when "Wrestling"
+	when "wrestling"
 		info = SportsToday::Schedule.wrestling
 		show_info(info)
 
-	when "Motor Sports"
+	when "motor Sports"
 		info = SportsToday::Schedule.motor_sports
 		show_info(info)
 
-	when "Other"
+	when "other"
 		info = SportsToday::Schedule.other
 		show_info(info)
 
-	when "Exit", "exit"
+	when "exit"
 		quit
 
 
@@ -91,7 +95,7 @@ end
 def menu
 	puts "1.  Football"
 	puts "2.  Baseball"
-	puts "3.  Basketball"
+	puts "3.  College Basketball or NBA Basketball"
 	puts "4.  Hockey"
 	puts "5.  Soccer"
 	puts "6.  Tennis"
