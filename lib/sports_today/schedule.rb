@@ -40,10 +40,12 @@ class SportsToday::Schedule
 		select_by("Baseball")
 	end
 
+	def self.college_basketball
+		select_by("College Basketball")
+	end
 
-
-	def self.basketball
-		select_by("Basketball")
+	def self.nba_basketball
+		select_by("NBA")
 	end
 
 
@@ -78,7 +80,7 @@ class SportsToday::Schedule
 
 
 	def self.other
-		select_by("")
+		select_by(" ")
 	end
 
 end
