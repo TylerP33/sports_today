@@ -76,12 +76,16 @@ def start
 end
 
 def show_info(info)
-	puts ""
-	puts "\n1. #{info.sport}"
-	puts "\n2. #{info.time}"
-	puts "\n3. #{info.description}"
-    puts "\n4. #{info.matchup}"
-    puts ""
+	info.each {|info| 
+		puts""
+		puts""
+		puts "\n1. #{info.sport}"
+		puts "\n2. #{info.time}"
+		puts "\n3. #{info.description}"
+		puts "\n4. #{info.matchup}"
+		puts ""
+		puts ""
+	}
 end
 
 def menu
