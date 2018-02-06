@@ -10,22 +10,49 @@ end
 
 def start
 	puts ""
-	puts "Please choose the time slot that you are interested in:"
+	puts "Please choose a sport to see if it is on today:"
 	puts ""
+	menu
 	puts ""
+
 	input = nil
 	input = gets.strip
-	info = SportsToday::Schedule.find(input.to_i)
-	show_time(info)
+	info = SportsToday::Schedule.hockey
+
+	case input
+
+	when "Wrestling"
+		show_info(info)
+
+	when "Basketball"
+		show_info(info)
+
+	when "Hockey"
+		show_info(info)
+	end
+
+
 end
 
 def show_info(info)
-	puts "\n#{info.sport}"
-	puts "\n#{info.time}"
-	puts "\n#{info.description}"
-    puts "\n#{info.matchup}"
+	puts "\n1. #{info.sport}"
+	puts "\n2. #{info.time}"
+	puts "\n3. #{info.description}"
+    puts "\n4. #{info.matchup}"
 end
 
+def menu
+	puts "1.  Football"
+	puts "2.  Baseball"
+	puts "3.  Basketball"
+	puts "4.  Hockey"
+	puts "5.  Soccer"
+	puts "6.  Tennis"
+	puts "7.  Golf"
+	puts "8.  Wrestling"
+	puts "9.  Motor Sports"
+	puts "10. Other"
+end
 
 
 
