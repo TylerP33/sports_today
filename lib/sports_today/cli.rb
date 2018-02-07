@@ -1,5 +1,6 @@
 class SportsToday::CLI
 
+
 def call
 	SportsToday::Scraper.new.make_schedule   
 	puts "-------------------------------"
@@ -7,6 +8,7 @@ def call
 	puts "-------------------------------"
 	start
 end
+
 
 def start
 	puts ""
@@ -20,11 +22,14 @@ def start
 	puts "To leave the program, just type exit and we'll get you out of here!"
 	puts ""
 	puts ""
+	user_input
+end
+
+
+def user_input
 
 	input = nil
 	input = gets.downcase.strip
-
-	
 
 	case input
 
@@ -88,10 +93,13 @@ def start
 	when "exit"
 		quit
 
+	when "menu"
+		start
+
 
 	end
-
 end
+
 
 def show_info(info)
 	info.each {|info| 
@@ -109,16 +117,18 @@ end
 def post_search_options
 	puts ""
 	puts ""
+	puts "|---------------------------------------------------------------------------------------|"
+	puts "|                                                                                       |"
+	puts "| If no information came up, then your selected sport is not airing today.              |"
+	puts "|                                                                                       |"
+	puts "| To see another option, just type the desired sport. To see the menu again, type menu. |"
+	puts "|                                                                                       |"
+	puts "| And if you want to make us sad, you can leave by typing exit.                         |"
+	puts "|                                                                                       |"
+	puts "|---------------------------------------------------------------------------------------|"
 	puts ""
-	puts "To see more options, please type menu.  To quit, type exit"
-	input = nil
-	input = gets.strip
-
-	if input == "menu"
-		start
-	else 
-		quit
-	end
+	puts ""
+	user_input
 end
 
 
@@ -134,6 +144,7 @@ def menu
 	puts "9.  Motor Sports"
 	puts "10. Other"
 end
+
 
 def quit
 	puts "\n-------------------------------------"
