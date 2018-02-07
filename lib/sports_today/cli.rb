@@ -3,9 +3,9 @@ class SportsToday::CLI
 
 def call
 	SportsToday::Scraper.new.make_schedule   
-	puts "-------------------------------"
-	puts "Welcome to the World of Sports!"
-	puts "-------------------------------"
+	puts "|---------------------------------|"
+	puts "| Welcome to the World of Sports! |"
+	puts "|---------------------------------|"
 	start
 end
 
@@ -13,7 +13,7 @@ end
 def start
 	puts ""
 	puts ""
-	puts "Please choose a sport to see airing time and event information.  Remember, all times are in Eastern Standard time."
+	puts "Please choose a sport to find out event information and TV airing time.  Remember, all times are in Eastern Standard time."
 	puts ""
 	puts ""
 	menu
@@ -119,7 +119,7 @@ def post_search_options
 	puts ""
 	puts "|---------------------------------------------------------------------------------------|"
 	puts "|                                                                                       |"
-	puts "| If no information came up, then your selected sport is not airing today.              |"
+	puts "| If no information came up, then your selected sport is not on TV today.               |"
 	puts "|                                                                                       |"
 	puts "| To see another option, just type the desired sport. To see the menu again, type menu. |"
 	puts "|                                                                                       |"
@@ -133,25 +133,27 @@ end
 
 
 def menu
-	puts "1.  Football"
-	puts "2.  Baseball"
-	puts "3.  College Basketball or NBA Basketball"
-	puts "4.  Hockey"
-	puts "5.  Soccer"
-	puts "6.  Tennis"
-	puts "7.  Golf"
-	puts "8.  Wrestling"
-	puts "9.  Motor Sports"
-	puts "10. Other"
+	puts "\n1.  Football"
+	puts "\n2.  Baseball"
+	puts "\n3.  College Basketball or NBA Basketball"
+	puts "\n4.  Hockey"
+	puts "\n5.  Soccer"
+	puts "\n6.  Tennis"
+	puts "\n7.  Golf"
+	puts "\n8.  Wrestling"
+	puts "\n9.  Motor Sports"
+	puts "\n10. Other"
 end
 
 
 def quit
-	puts "\n-------------------------------------"
-	puts "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	puts "\nThanks for checking out Sports Today!"
-	puts "\n-------------------------------------"
-	puts "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	puts ""
+	puts ""
+	puts "|---------------------------------------|"
+	puts "| Thanks for checking out Sports Today! |"
+	puts "|---------------------------------------|"
+	puts ""
+	puts ""
 	exit
 end
 
