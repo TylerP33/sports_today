@@ -2,16 +2,16 @@ class SportsToday::CLI
 
 def call
 	SportsToday::Scraper.new.make_schedule   
-	puts "---------------------------------"
+	puts "-------------------------------"
 	puts "Welcome to the World of Sports!"
-	puts "---------------------------------"
+	puts "-------------------------------"
 	start
 end
 
 def start
 	puts ""
 	puts ""
-	puts "Please choose a sport to see it's airing info.  Remember, all times are in Eastern Standard time."
+	puts "Please choose a sport to see airing time and event information.  Remember, all times are in Eastern Standard time."
 	puts ""
 	puts ""
 	menu
@@ -25,51 +25,65 @@ def start
 	input = gets.downcase.strip
 
 	
+
 	case input
 
 	when "football"
 		info = SportsToday::Schedule.football
 		show_info(info)
-
+		post_search_options
+	
+		
 	when "baseball"
 		info = SportsToday::Schedule.baseball
 		show_info(info)
+		post_search_options
 
 	when "college basketball"
 		info = SportsToday::Schedule.college_basketball
-		show_info(info)
+		show_info(info) 
+		post_search_options
+
 
 	when "nba basketball"
 		info = SportsToday::Schedule.nba_basketball
 		show_info(info)
+		post_search_options
 
 	when "hockey"
 		info = SportsToday::Schedule.hockey
 		show_info(info)
+		post_search_options
 
 	when "soccer"
 		info = SportsToday::Schedule.soccer
 		show_info(info)
+		post_search_options
 
 	when "tennis"
 		info = SportsToday::Schedule.tennis
 		show_info(info)
+		post_search_options
 
 	when "golf"
 		info = SportsToday::Schedule.golf
 		show_info(info)
+		post_search_options
 
 	when "wrestling"
 		info = SportsToday::Schedule.wrestling
 		show_info(info)
+		post_search_options
 
-	when "motor Sports"
+	when "motor sports"
 		info = SportsToday::Schedule.motor_sports
 		show_info(info)
+		post_search_options
 
 	when "other"
 		info = SportsToday::Schedule.other
 		show_info(info)
+		post_search_options
 
 	when "exit"
 		quit
@@ -83,14 +97,30 @@ def show_info(info)
 	info.each {|info| 
 		puts""
 		puts""
-		puts "\n1. #{info.sport}"
-		puts "\n2. #{info.time}"
-		puts "\n3. #{info.description}"
-		puts "\n4. #{info.matchup}"
+		puts "\nEvent: #{info.sport}"
+		puts "\nTime: #{info.time}"
+		puts "\nDescription: #{info.description}"
+		puts "\nMatchup: #{info.matchup}"
 		puts ""
 		puts ""
 	}
 end
+
+def post_search_options
+	puts ""
+	puts ""
+	puts ""
+	puts "To see more options, please type menu.  To quit, type exit"
+	input = nil
+	input = gets.strip
+
+	if input == "menu"
+		start
+	else 
+		quit
+	end
+end
+
 
 def menu
 	puts "1.  Football"
