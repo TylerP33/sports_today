@@ -75,7 +75,7 @@ class SportsToday::Schedule
 
 
 	def self.motor_sports
-		select_by("Racegol")
+		select_by("Race")
 	end
 
 
