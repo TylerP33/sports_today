@@ -29,11 +29,11 @@ end
 def user_input
 
 	input = nil
-	input = gets.downcase.strip
+	input = gets.strip.downcase
 
 	case input
 
-	when "football"
+	when  "football"
 		info = SportsToday::Schedule.football
 		show_info(info)
 		post_search_options
@@ -85,8 +85,8 @@ def user_input
 		show_info(info)
 		post_search_options
 
-	when "other"
-		info = SportsToday::Schedule.other
+	when "all events"
+		info = SportsToday::Schedule.all_events
 		show_info(info)
 		post_search_options
 
@@ -96,13 +96,19 @@ def user_input
 	when "menu"
 		start
 
+	else
+		wrong_search
+		
 
+	
 	end
+
+
 end
 
 
 def show_info(info)
-	info.each {|info| 
+	info.each {|info|
 		puts""
 		puts""
 		puts "\nEvent: #{info.sport}"
@@ -131,6 +137,22 @@ def post_search_options
 	user_input
 end
 
+def wrong_search
+	puts ""
+	puts ""
+	puts "|---------------------------------------------------------------------------------------|"
+	puts "|                                                                                       |"
+	puts "| Sorry, that is not a menu option.  Make sure to check your spelling.                  |"
+	puts "|                                                                                       |"
+	puts "| To see another option, just type the desired sport. To see the menu again, type menu. |"
+	puts "|                                                                                       |"
+	puts "| And if you want to make us sad, you can leave by typing exit.                         |"
+	puts "|                                                                                       |"
+	puts "|---------------------------------------------------------------------------------------|"
+	user_input
+end
+
+
 
 def menu
 	puts "\n1.  Football"
@@ -142,7 +164,7 @@ def menu
 	puts "\n7.  Golf"
 	puts "\n8.  Wrestling"
 	puts "\n9.  Motor Sports"
-	puts "\n10. Other"
+	puts "\n10. All Events"
 end
 
 
