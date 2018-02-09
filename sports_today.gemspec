@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["tyler3321@gmail.com"]
 
   spec.summary       = "Find out if your favorite sport is airing on TV today"
-  spec.description   = "Allows the user to pick a sport through a menu and returns airing information about selected sport"
+  spec.description   = "Allows the user to pick a sport through a menu and returns airing information about the selected sport."
   spec.homepage      = "https://github.com/TylerP33/sports_today"
-  spec.license       = 
+  spec.license       = "https://opensource.org/licenses/MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
