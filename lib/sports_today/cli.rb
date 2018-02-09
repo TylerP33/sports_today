@@ -13,8 +13,9 @@ end
 def start
 	puts ""
 	puts ""
-	puts "Please choose a sport to find out event information and TV airing time.  Remember, all times are in Eastern Standard time."
+	puts "Please choose a sport to find out event information and TV airing time.  The sport genre must be typed."
 	puts ""
+	puts "Remember, all times are in Eastern Standard time."
 	puts ""
 	menu
 	puts ""
@@ -108,7 +109,7 @@ end
 
 
 def show_info(info)
-	info.each {|info|
+	info.collect {|info|
 		puts""
 		puts""
 		puts "\nEvent: #{info.sport}"
@@ -149,6 +150,8 @@ def wrong_search
 	puts "| And if you want to make us sad, you can leave by typing exit.                         |"
 	puts "|                                                                                       |"
 	puts "|---------------------------------------------------------------------------------------|"
+	puts ""
+	puts ""
 	user_input
 end
 
