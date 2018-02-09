@@ -27,7 +27,7 @@ class SportsToday::Schedule
 	end
 
 	def self.select_by(sport)
-		all.select {|object| object.sport.include?(sport) || object.description.include?(sport) || object.matchup.include?(sport) || object.time.include?(sport) }
+		all.select {|object| object.sport.include?(sport || sport1) || object.description.include?(sport) || object.matchup.include?(sport) || object.time.include?(sport) }
 	end
 
 
@@ -75,7 +75,7 @@ class SportsToday::Schedule
 
 
 	def self.motor_sports
-		select_by("Nascar")
+		select_by("Auto")
 	end
 
 
