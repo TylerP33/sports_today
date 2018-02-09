@@ -1,8 +1,8 @@
 # SportsToday
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sports_today`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to SportsToday, the interactive CLI-APP that allows you to stay intune with your favorite sports.  As we know, sports are played around the world, and many are televised.
+What SportsToday sets out to do is let the user pick their favorite sport through a menu and return, if possible, all the events that fall under that category.  We will show you
+matchups, the description of the event, and when the event will be televised, as well as what network it will be televised on.
 
 ## Installation
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sports_today. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/TylerP33/sports_today. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
