@@ -22,7 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use, simply install the program and run it.  You will start out at a menu screen and from there, you can choose the sport you would like to get more information on.
+
+For a tutorial on how to use the app, click on the link below:
+
+https://www.youtube.com/watch?v=_wzpP9zho20
+
+
 
 ## Development
 
@@ -40,4 +46,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the SportsToday project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/sports_today/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the SportsToday project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/TylerP33/sports_today/blob/master/CODE_OF_CONDUCT.md).
